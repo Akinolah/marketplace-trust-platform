@@ -7,10 +7,31 @@ A marketplace platform that detects fraud rings and powers product recommendatio
 - Backend API: https://marketplace-trust-platform.onrender.com
 - Frontend: https://marketplace-trust-platform-frontend-dusky.vercel.app/
 
+## Author & License
+
+- Author: Akinolah
+- GitHub: https://github.com/akinolah
+- LinkedIn: https://www.linkedin.com/in/akinolah
+- License: MIT
+
+## Screen Recording Walkthrough
+
+A short walkthrough of the app is available here:
+
+- Demo video: https://your-demo-link.example
+
+## API Documentation
+
+For endpoint details and request/response examples, see [docs/API.md](docs/API.md).
+
 ---
 
 ## Table of Contents
 
+- [Live Demo](#live-demo)
+- [Author & License](#author--license)
+- [Screen Recording Walkthrough](#screen-recording-walkthrough)
+- [API Documentation](#api-documentation)
 - [Architecture](#architecture)
 - [Why a Graph Database?](#why-a-graph-database)
 - [How the Code Works](#how-the-code-works)
