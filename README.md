@@ -251,6 +251,14 @@ The dashboard highlights the two core assessment features: fraud-ring detection 
 
 ![Marketplace Trust Dashboard](assets/Screenshot%202026-08-29%20052829.png)
 
+![Fraud Investigation and Product Recommendation View](assets/Screenshot%202026-08-28%20065929.png)
+
+![Marketplace Health Overview](assets/Screenshot%202026-08-29%20052811.png)
+
+![Trust and Review Monitoring](assets/Screenshot%202026-08-29%20052849.png)
+
+![Additional Analytics View](assets/Screenshot%202026-08-29%20052915.png)
+
 This UI shows the main monitoring workflow:
 
 - Fraud ring detection panel with risk scoring and shared infrastructure indicators
