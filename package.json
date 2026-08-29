@@ -1,0 +1,13 @@
+{
+  "name": "marketplace",
+  "private": true,
+  "workspaces": [
+    "Frontend",
+    "Backend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace=Frontend",
+    "dev:backend": "npm run dev --workspace=Backend",
+    "seed": "npm run seed --workspace=Backend"
+  }
+}
