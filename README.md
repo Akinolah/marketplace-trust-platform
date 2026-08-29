@@ -2,6 +2,11 @@
 
 A marketplace platform that detects fraud rings and powers product recommendations using a graph database (CognoDB, openCypher over Bolt). Built with a monorepo: Next.js dashboard frontend and Fastify REST API backend.
 
+## Live Demo
+
+- Backend API: https://marketplace-trust-platform.onrender.com
+- Frontend: https://marketplace-trust-platform-frontend-dusky.vercel.app/
+
 ---
 
 ## Table of Contents
