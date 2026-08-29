@@ -12,8 +12,10 @@ A marketplace platform that detects fraud rings and powers product recommendatio
   - [Backend Connection Points](#backend-connection-points)
   - [Frontend Connection Points](#frontend-connection-points)
 - [Data Model](#data-model)
+- [UI Screenshot](#ui-screenshot)
 - [Setup](#setup)
 - [Main Queries](#main-queries)
+- [Free-tier Hosting](#free-tier-hosting)
 
 ---
 
@@ -243,6 +245,20 @@ RETURN ip.address, pm.lastFour, ringUsers
 
 ---
 
+## UI Screenshot
+
+The dashboard highlights the two core assessment features: fraud-ring detection and marketplace trust analytics.
+
+![Marketplace Trust Dashboard](assets/Screenshot%202026-08-29%20052829.png)
+
+This UI shows the main monitoring workflow:
+
+- Fraud ring detection panel with risk scoring and shared infrastructure indicators
+- Marketplace health metrics and trust score overview
+- Product and review intelligence for investigation workflows
+
+---
+
 ## Setup
 
 ### 1. Provision CognoDB
@@ -289,6 +305,42 @@ npm run dev
 # Redirects to /dashboard automatically
 # Dashboard loads data from backend via React Query
 ```
+
+---
+
+## Free-tier Hosting
+
+For a submission or demo, this app is already set up to deploy on Netlify's free tier.
+
+### Option 1: Netlify (recommended)
+
+1. Push this repo to GitHub.
+2. In Netlify, choose "Add new site" → "Import an existing project".
+3. Select the repository.
+4. Set the build command to:
+
+```bash
+cd Frontend && npm install && npx next build
+```
+
+5. Set the publish directory to:
+
+```bash
+Frontend/.next
+```
+
+6. For the backend, either:
+   - keep it local for the assessment, or
+   - deploy the backend as a separate Node service on Render or Railway (free tiers), then update the frontend API URL in `Frontend/.env.local`.
+
+### Option 2: Vercel
+
+1. Import the repo in Vercel.
+2. Set the app root to `Frontend`.
+3. Use the default Next.js settings.
+4. Add the backend URL as an environment variable such as `NEXT_PUBLIC_API_URL`.
+
+> For a classroom assessment, the key requirement is usually a working public demo link plus a clear UI screenshot. Netlify/Vercel are the easiest free-tier options.
 
 ---
 

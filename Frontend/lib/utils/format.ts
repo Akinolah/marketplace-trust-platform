@@ -1,5 +1,18 @@
 // lib/utils/format.ts
-import { formatDistanceToNow, format as formatDate, formatCurrency as formatCurrencyFn } from 'date-fns';
+import { formatDistanceToNow, format as dateFnsFormat } from 'date-fns';
+
+/**
+ * Back-compat alias used by several dashboard pages.
+ */
+export function formatDate(date: string | Date, pattern: string = 'MMM d, yyyy'): string {
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
+
+  if (isNaN(dateObj.getTime())) {
+    return 'Invalid date';
+  }
+
+  return dateFnsFormat(dateObj, pattern);
+}
 
 /**
  * Format a date string to a human-readable relative time
@@ -31,7 +44,7 @@ export function formatDateString(
     return 'Invalid date';
   }
   
-  return formatDate(dateObj, format);
+  return dateFnsFormat(dateObj, format);
 }
 
 /**
@@ -197,7 +210,7 @@ export function formatRelativeWithTime(date: string | Date): string {
   }
   
   const relative = formatDistanceToNow(dateObj, { addSuffix: true });
-  const time = formatDate(dateObj, 'h:mm a');
+  const time = dateFnsFormat(dateObj, 'h:mm a');
   
   return `${relative} at ${time}`;
 }
